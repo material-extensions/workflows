@@ -46,7 +46,7 @@ jobs:
 
       - name: 🏷️ Manage label based on PR title check result
         if: always()
-        uses: okineadev/add-labels@v1.0.2
+        uses: okineadev/add-labels@v1.0.3
         with:
           labels: "🔤 invalid title"
           action: ${{ steps.title-check.outcome == 'failure' && 'add' || 'remove' }}
