@@ -5,14 +5,17 @@ on:
     inputs:
       sparse-checkout-cone-mode:
         description: "Whether to use cone mode for sparse checkout"
+        type: boolean
         required: false
         default: false
       sparse-checkout:
         description: "Files to checkout"
+        type: string
         required: false
         default: "commitlint.config.js"
       commitlint-help-url:
         description: "URL with help on commit format rules"
+        type: string
         required: false
 
 permissions:
