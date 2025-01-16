@@ -12,11 +12,13 @@ jobs:
     steps:
       - name: 🙏 Post Thank You Comment
         uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea # v7.0.1
+        env:
+          comment: ${{ github.event.inputs.comment }}
         with:
           script: |
             github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: '${{ github.event.inputs.comment }}'
+              body: process.env.comment
             })
