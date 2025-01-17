@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "biomejs.biome",
+    "editorconfig.editorconfig",
+    "oven.bun-vscode",
+    "davidanson.vscode-markdownlint",
+    "huntertran.auto-markdown-toc"
+  ]
+}
