@@ -8,6 +8,10 @@ on:
         type: string
         required: true
 
+permissions:
+  pull-requests: write
+  issues: write
+
 jobs:
   thank-you:
     runs-on: ubuntu-latest
