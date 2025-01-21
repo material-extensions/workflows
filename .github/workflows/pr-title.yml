@@ -4,17 +4,17 @@ on:
   workflow_call:
     inputs:
       sparse-checkout-cone-mode:
-        description: "Whether to use cone mode for sparse checkout"
+        description: Whether to use cone mode for sparse checkout
         type: boolean
         required: false
         default: false
       sparse-checkout:
-        description: "Files to checkout"
+        description: Files to checkout
         type: string
         required: false
-        default: "commitlint.config.js"
+        default: commitlint.config.js
       commitlint-help-url:
-        description: "URL with help on commit format rules"
+        description: URL with help on commit format rules
         type: string
         required: false
 
