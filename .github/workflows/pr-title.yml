@@ -18,10 +18,6 @@ on:
         type: string
         required: false
 
-permissions:
-  pull-requests: write
-  issues: write # Update issue labels
-
 jobs:
   lint-pr-title:
     runs-on: ubuntu-latest
@@ -38,17 +34,7 @@ jobs:
         run: npm install --global @commitlint/config-conventional commitlint
 
       - name: 🔍 Check PR title with commitlint
-        id: title-check
         env:
           PR_TITLE: ${{ github.event.pull_request.title }}
           HELP_URL: ${{ inputs.commitlint-help-url }}
         run: echo "$PR_TITLE" | npx commitlint --help-url $HELP_URL
-
-      - name: 🏷️ Manage label based on PR title check result
-        if: always()
-        uses: material-extensions/add-labels@v1.0.4
-        with:
-          labels: "🔤 invalid title"
-          action: ${{ steps.title-check.outcome == 'failure' && 'add' || 'remove' }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
