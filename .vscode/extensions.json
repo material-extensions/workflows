@@ -2,8 +2,8 @@
   "recommendations": [
     "biomejs.biome",
     "editorconfig.editorconfig",
-    "oven.bun-vscode",
-    "davidanson.vscode-markdownlint",
-    "huntertran.auto-markdown-toc"
+    "DavidAnson.vscode-markdownlint",
+    "github.vscode-github-actions",
+    "docsmsft.docs-yaml"
   ]
 }
