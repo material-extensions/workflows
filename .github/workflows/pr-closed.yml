@@ -4,7 +4,7 @@ on:
   workflow_call:
     inputs:
       comment:
-        description: "Comment to post on PR close"
+        description: Comment to post on PR close
         type: string
         required: true
 
